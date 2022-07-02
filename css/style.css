@@ -1,19 +1,57 @@
+:root {
+    --clr-primary: white; 
+    --clr-secondary: rgb(188, 93, 212);
+    --clr-neutral: rgb(15, 15, 15);
+    --clr-neutral-transparency: rgba(15, 15, 15, 0.7);
+
+    --fontfamily-primary: 'Quicksand', Arial, Helvetica, sans-serif; /* Font fallbacks */
+
+    --fontweight-title: 900;
+
+    --fontsize-normal: 1rem;
+    --fontsize-large: 1.2rem;
+    --fontsize-title: 6rem;
+}
+
+
 /* General attributes */
-* {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
+
     text-decoration: none;
+    
     padding: 0;
     margin: 0;
 
-    font-family: 'Quicksand', Arial, Helvetica, sans-serif; /* Font fallbacks */
-    font-size: 12px;
-    color: aliceblue;
+    font-family: var(--fontfamily-primary);
+    font-size: var(--fontsize-normal);
+    color: var(--clr-primary);
+}
+
+/* Remove list styles on ul and ol elements with a list role, which suggest default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* H1 Page Title */
+h1 {
+    font-size: var(--fontsize-title);
+    font-weight: var(--fontweight-title);
+
+    text-align: right;
+}
+
+hr {
+    color: var(--clr-secondary);
 }
 
 /* Body */
 body {
     /* Background image */
-    background-color: rgb(15, 15, 15); /* Default colour */
+    background-color: var(--clr-neutral); /* Default colour */
     background-image: url("../images/background.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,15 +63,28 @@ body {
     padding-bottom: 15%;
 }
 
-/* H1 Page Title */
-h1 {
-    font-size: 10vh;
+.nav-list {
+    list-style: none;
+    display: flex;
 
-    text-align: right;
+    gap: 1rem;
+    background-color: var(--clr-neutral-transparency);
+
+    margin-bottom: 2rem;
 }
 
-hr {
-    color: aliceblue;
+.nav-list li {
+    padding: 1.5rem;
 }
+
+.nav a {
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.nav a:hover {
+    background-color: var(--clr-secondary);
+}
+
 
 /* added no padding to figure through css only to match it with the image provided for the excercise */
