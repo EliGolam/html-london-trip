@@ -103,6 +103,10 @@ body {
     padding-bottom: 2rem;
 }
 
+.content-box:hover {
+    background-color: var(--clr-secondary);
+}
+
 .neutral-background-clr {
     background-color: var(--clr-neutral-transparency);
 }
@@ -126,6 +130,13 @@ body {
 .photoes img {
     border-radius: 4rem;
     padding: 0.5rem;
+    max-width: 50%;
+}
+
+.photoes img:hover {
+    border-radius: 0;
+    border: solid;
+    border-color: var(--clr-secondary);
 }
 
 /* Main grid for layout */
