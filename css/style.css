@@ -1,6 +1,7 @@
 :root {
     --clr-primary: white; 
     --clr-secondary: rgb(188, 93, 212);
+    --clr-secondary-transparency: rgba(188, 93, 212, 0.3);
     --clr-neutral: rgb(15, 15, 15);
     --clr-neutral-transparency: rgba(15, 15, 15, 0.7);
 
@@ -9,7 +10,7 @@
     --fontweight-title: 900;
 
     --fontsize-normal: 1rem;
-    --fontsize-large: 1.2rem;
+    --fontsize-large: 1.6rem;
     --fontsize-title: 6rem;
 }
 
@@ -57,12 +58,13 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-    padding-right: 10%;
-    padding-left: 10%;
-    padding-top: 5%;
-    padding-bottom: 15%;
+    padding-left: 30rem;
+    padding-right: 30rem;
+    padding-top: 5rem;
+    padding-bottom: 15rem;
 }
 
+/* Navigation bar */
 .nav-list {
     list-style: none;
     display: flex;
@@ -86,5 +88,68 @@ body {
     background-color: var(--clr-secondary);
 }
 
+/* Styling main sections */
+.content-box {
+    border-radius: 5rem;
+    padding: 2rem;
+}
 
-/* added no padding to figure through css only to match it with the image provided for the excercise */
+.content-box li {
+    padding-left: 1rem;
+}
+
+.content-box h2 {
+    font-size: var(--fontsize-large);
+    padding-bottom: 2rem;
+}
+
+.neutral-background-clr {
+    background-color: var(--clr-neutral-transparency);
+}
+
+.secondary-background-clr {
+    background-color: var(--clr-secondary-transparency);
+}
+
+/* Figure centering */
+.photoes {
+    text-align: center;
+    align-items: center;
+}
+
+.photoes h2 {
+    font-size: var(--fontsize-large);
+    padding: 2rem;
+    color: var(--clr-secondary);
+}
+
+.photoes img {
+    border-radius: 4rem;
+    padding: 0.5rem;
+}
+
+/* Main grid for layout */
+.main-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+    padding-block: 2rem;
+    margin-inline: auto;
+}
+
+/* Grid Fixes */
+.primary-box {
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+
+    grid-column-start: 1;
+    grid-row: 1 / span 2;
+}
+
+.primary-box h2 {
+    text-align: center;
+}
